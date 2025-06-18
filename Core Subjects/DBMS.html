@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DBMS Full Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    #search {
+      margin: 1rem auto;
+      display: block;
+      padding: 0.6rem;
+      width: 90%;
+      max-width: 500px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .note {
+      background: white;
+      margin: 10px auto;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .note summary {
+      background-color: #e8f5e9;
+      cursor: pointer;
+      padding: 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 8px 8px 0 0;
+    }
+    .note div {
+      padding: 1rem;
+      border-top: 1px solid #ccc;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header><b>DBMS</b></header>
+  <input type="text" id="search" placeholder="🔍 Search topic..." onkeyup="filterNotes()"/>
+
+  <section id="notesContainer">
+
+    <details class="note"><summary>1. Introduction to DBMS</summary><div>
+      <p><strong>Database:</strong> Organized collection of data.</p>
+      <p><strong>DBMS:</strong> Software to manage databases.</p>
+      <p><strong>Examples:</strong> MySQL, Oracle, PostgreSQL, MongoDB</p>
+    </div></details>
+
+    <details class="note"><summary>2. Characteristics of DBMS</summary><div>
+      <ul>
+        <li>Data Redundancy Control</li>
+        <li>Data Independence</li>
+        <li>Efficient Query Processing</li>
+        <li>Concurrent Access</li>
+        <li>Security and Authorization</li>
+        <li>Data Integrity</li>
+        <li>Backup and Recovery</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>3. Components of DBMS</summary><div>
+      <ul>
+        <li>Hardware</li>
+        <li>Software</li>
+        <li>Data (with metadata)</li>
+        <li>Users: DBA, Programmers, End Users</li>
+        <li>Procedures</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>4. Database Models</summary><div>
+      <ul>
+        <li>Hierarchical Model</li>
+        <li>Network Model</li>
+        <li>Relational Model</li>
+        <li>Object-Oriented Model</li>
+        <li>Document/NoSQL Model</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>5. DBMS Architecture</summary><div>
+      <ul>
+        <li>1-Tier Architecture</li>
+        <li>2-Tier Architecture (Client ↔ Server)</li>
+        <li>3-Tier Architecture (Client, App, DB)</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>6. Data Independence</summary><div>
+      <ul>
+        <li><strong>Logical:</strong> Schema changes don't affect views.</li>
+        <li><strong>Physical:</strong> Storage changes don't affect schema.</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>7. Database Languages</summary><div>
+      <ul>
+        <li><strong>DDL:</strong> CREATE, ALTER, DROP</li>
+        <li><strong>DML:</strong> SELECT, INSERT, UPDATE, DELETE</li>
+        <li><strong>DCL:</strong> GRANT, REVOKE</li>
+        <li><strong>TCL:</strong> COMMIT, ROLLBACK, SAVEPOINT</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>8. Keys in DBMS</summary><div>
+      <ul>
+        <li>Primary Key</li>
+        <li>Candidate Key</li>
+        <li>Foreign Key</li>
+        <li>Super Key</li>
+        <li>Composite Key</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>9. Normalization</summary><div>
+      <p>Eliminates redundancy and maintains data integrity.</p>
+      <ul>
+        <li>1NF: Atomic values</li>
+        <li>2NF: No partial dependency</li>
+        <li>3NF: No transitive dependency</li>
+        <li>BCNF: Stronger 3NF</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>10. SQL Basics</summary><div>
+      <pre>
+SELECT * FROM table;
+INSERT INTO table VALUES (...);
+UPDATE table SET column = value WHERE ...;
+DELETE FROM table WHERE ...;
+      </pre>
+    </div></details>
+
+    <details class="note"><summary>11. Indexing</summary><div>
+      <p>Improves data retrieval speed.</p>
+      <ul>
+        <li>Single-level Index</li>
+        <li>Multi-level Index</li>
+        <li>B-Tree Index</li>
+        <li>Hash Index</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>12. Transactions</summary><div>
+      <p>Set of operations performing a logical task.</p>
+      <strong>ACID Properties:</strong>
+      <ul>
+        <li>Atomicity</li>
+        <li>Consistency</li>
+        <li>Isolation</li>
+        <li>Durability</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>13. Concurrency Control</summary><div>
+      <ul>
+        <li>Lock-based Protocols (Shared, Exclusive)</li>
+        <li>Timestamp Ordering</li>
+        <li>Two-Phase Locking (2PL)</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>14. Deadlock</summary><div>
+      <p>Occurs when transactions wait indefinitely for each other’s resources.</p>
+      <p><strong>Techniques:</strong> Prevention, Detection, Recovery</p>
+    </div></details>
+
+    <details class="note"><summary>15. Backup and Recovery</summary><div>
+      <ul>
+        <li>Full Backup</li>
+        <li>Incremental Backup</li>
+        <li>Log-based Recovery</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>16. ER Model</summary><div>
+      <p>Represents real-world entities and relationships.</p>
+      <ul>
+        <li>Entity</li>
+        <li>Attributes</li>
+        <li>Relationships (1:1, 1:M, M:M)</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>17. Relational Algebra</summary><div>
+      <ul>
+        <li>Selection (σ)</li>
+        <li>Projection (π)</li>
+        <li>Union (∪)</li>
+        <li>Set Difference (-)</li>
+        <li>Cartesian Product (×)</li>
+        <li>Join (⨝)</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>18. PL/SQL</summary><div>
+      <p>Procedural extension of SQL.</p>
+      <pre>
+BEGIN
+  -- statements
+END;
+      </pre>
+    </div></details>
+
+    <details class="note"><summary>19. Distributed Databases</summary><div>
+      <ul>
+        <li>Homogeneous: Same DBMS</li>
+        <li>Heterogeneous: Different DBMS</li>
+      </ul>
+    </div></details>
+
+    <details class="note"><summary>20. NoSQL Databases</summary><div>
+      <ul>
+        <li>Document-based: MongoDB</li>
+        <li>Key-value: Redis</li>
+        <li>Column-based: Cassandra</li>
+        <li>Graph-based: Neo4j</li>
+      </ul>
+    </div></details>
+
+  </section>
+
+  <script>
+    function filterNotes() {
+      const input = document.getElementById("search").value.toLowerCase();
+      const notes = document.querySelectorAll(".note");
+      notes.forEach(note => {
+        const text = note.textContent.toLowerCase();
+        note.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>

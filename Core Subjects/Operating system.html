@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operating System Full Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2196f3;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    #search {
+      margin: 1rem auto;
+      display: block;
+      padding: 0.6rem;
+      width: 90%;
+      max-width: 500px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .note {
+      background: white;
+      margin: 10px auto;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .note summary {
+      background-color: #e3f2fd;
+      cursor: pointer;
+      padding: 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 8px 8px 0 0;
+    }
+    .note div {
+      padding: 1rem;
+      border-top: 1px solid #ccc;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header><b>Operating System</b></header>
+  <input type="text" id="search" placeholder="🔍 Search topic..." onkeyup="filterNotes()" />  <section id="notesContainer"><details class="note"><summary>1. Introduction to OS</summary><div>
+  <p>Manages hardware & software resources. Acts as intermediary between user applications and hardware. Examples: Windows, Linux, macOS, Android.</p>
+</div></details>
+
+<details class="note"><summary>2. Functions of OS</summary><div>
+  <ul>
+    <li>Process Management</li>
+    <li>Memory Management</li>
+    <li>File System Management</li>
+    <li>Device Management</li>
+    <li>User Interface</li>
+    <li>Security & Protection</li>
+  </ul>
+</div></details>
+
+<details class="note"><summary>3. Types of Operating Systems</summary><div>
+  <ul>
+    <li>Batch OS</li>
+    <li>Time-Sharing OS</li>
+    <li>Distributed OS</li>
+    <li>Network OS</li>
+    <li>Real-Time OS</li>
+    <li>Mobile OS</li>
+  </ul>
+</div></details>
+
+<details class="note"><summary>4. Process and Thread</summary><div>
+  <p>Process: Program in execution with PCB. Thread: Lightweight process. Multithreading allows concurrent execution.</p>
+</div></details>
+
+<details class="note"><summary>5. Process Scheduling</summary><div>
+  <ul>
+    <li>Schedulers: Long-term, Short-term, Medium-term</li>
+    <li>Criteria: CPU utilization, throughput, waiting/turnaround/response time</li>
+  </ul>
+</div></details>
+
+<details class="note"><summary>6. Scheduling Algorithms</summary><div>
+  <p>Preemptive: Round Robin, Priority, SRTF<br>Non-preemptive: FCFS, SJF</p>
+</div></details>
+
+<details class="note"><summary>7. CPU Scheduling Concepts</summary><div>
+  <p>Context Switch: Save/restore process state. Dispatch Latency: Time to switch processes.</p>
+</div></details>
+
+<details class="note"><summary>8. Concurrency</summary><div>
+  <p>Concurrent execution of processes/threads. Requires synchronization to avoid race conditions.</p>
+</div></details>
+
+<details class="note"><summary>9. Synchronization Mechanisms</summary><div>
+  <ul>
+    <li>Locks and Mutexes</li>
+    <li>Semaphores (Binary/Counting)</li>
+    <li>Monitors</li>
+  </ul>
+</div></details>
+
+<details class="note"><summary>10. Deadlocks</summary><div>
+  <p>Caused by: Mutual exclusion, hold-and-wait, no preemption, circular wait. Techniques: Prevention, Avoidance (Banker's), Detection & Recovery.</p>
+</div></details>
+
+<details class="note"><summary>11. Memory Management</summary><div>
+  <p>Handles allocation/deallocation, sharing, protection. Techniques: Contiguous allocation, Paging, Segmentation, Virtual memory.</p>
+</div></details>
+
+<details class="note"><summary>12. Paging</summary><div>
+  <p>Fixed-size pages and frames. Uses page table to map logical to physical memory.</p>
+</div></details>
+
+<details class="note"><summary>13. Page Replacement Algorithms</summary><div>
+  <ul>
+    <li>FIFO</li>
+    <li>Optimal</li>
+    <li>LRU</li>
+    <li>Clock/Second-Chance</li>
+  </ul>
+</div></details>
+
+<details class="note"><summary>14. Virtual Memory</summary><div>
+  <p>Enables large memory via disk. Uses paging & swapping. Includes thrashing and working set concepts.</p>
+</div></details>
+
+<details class="note"><summary>15. File System</summary><div>
+  <p>Manages file access, naming, and storage. Allocation: Contiguous, Linked, Indexed.</p>
+</div></details>
+
+<details class="note"><summary>16. I/O Systems</summary><div>
+  <p>Handles communication with devices. Includes interrupt handling, buffering, spooling.</p>
+</div></details>
+
+<details class="note"><summary>17. Disk Scheduling</summary><div>
+  <ul>
+    <li>FCFS</li>
+    <li>SSTF</li>
+    <li>SCAN / C-SCAN</li>
+    <li>LOOK / C-LOOK</li>
+  </ul>
+</div></details>
+
+<details class="note"><summary>18. Protection and Security</summary><div>
+  <p>Authentication, permissions, ACLs, encryption, firewall, user/group IDs.</p>
+</div></details>
+
+<details class="note"><summary>19. Operating System Structures</summary><div>
+  <p>Monolithic, Microkernel, Modular, Hybrid approaches for system design.</p>
+</div></details>
+
+<details class="note"><summary>20. Case Study: Linux Kernel</summary><div>
+  <ul>
+    <li>Monolithic kernel with modules</li>
+    <li>Preemptive multitasking</li>
+    <li>VFS layer</li>
+    <li>CFS scheduler</li>
+    <li>Buddy system memory mgmt</li>
+  </ul>
+</div></details>
+
+<details class="note"><summary>✅ Use Cases & Study Tips</summary><div>
+  <ul>
+    <li>Draw memory management/paging diagrams</li>
+    <li>Calculate turnaround/waiting times</li>
+    <li>Understand command-line tools: top, ps, kill, chmod</li>
+    <li>Write pseudo-code for replacement algorithms</li>
+  </ul>
+</div></details>
+
+  </section>  <script>
+    function filterNotes() {
+      const input = document.getElementById("search").value.toLowerCase();
+      const notes = document.querySelectorAll(".note");
+      notes.forEach(note => {
+        const text = note.textContent.toLowerCase();
+        note.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script></body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artificial Intelligence Full Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+    #search {
+      margin: 1rem auto;
+      display: block;
+      padding: 0.6rem;
+      width: 90%;
+      max-width: 500px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .note {
+      background: white;
+      margin: 10px auto;
+      width: 90%;
+      max-width: 900px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .note summary {
+      background-color: #e1f0ff;
+      cursor: pointer;
+      padding: 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 8px 8px 0 0;
+    }
+    .note div {
+      padding: 1rem;
+      border-top: 1px solid #ccc;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header><b>Artificial Intelligence</b></header>
+  <input type="text" id="search" placeholder="🔍 Search topic..." onkeyup="filterNotes()" />  <section id="notesContainer">
+    <details class="note"><summary>1. Introduction to AI</summary><div>
+      AI is the study of creating machines that mimic human intelligence. Subfields include ML, NLP, robotics, vision, expert systems.
+    </div></details><details class="note"><summary>2. AI vs. Human Intelligence</summary><div>
+  AI is faster and more scalable, but lacks creativity, emotion, and common-sense reasoning compared to humans.
+</div></details>
+
+<details class="note"><summary>3. Branches of AI</summary><div>
+  Reactive machines, limited memory systems, theory of mind (future), self-aware AI (hypothetical).
+</div></details>
+
+<details class="note"><summary>4. AI Techniques</summary><div>
+  Symbolic logic, statistical methods, neural networks, and hybrid systems.
+</div></details>
+
+<details class="note"><summary>5. Machine Learning</summary><div>
+  Allows systems to learn from data. Types: supervised, unsupervised, reinforcement learning.
+</div></details>
+
+<details class="note"><summary>6. Supervised Learning</summary><div>
+  Trained on labeled data. Examples: regression, SVM, decision trees, neural networks.
+</div></details>
+
+<details class="note"><summary>7. Unsupervised Learning</summary><div>
+  Finds patterns in unlabeled data. Algorithms: k-means, PCA, autoencoders.
+</div></details>
+
+<details class="note"><summary>8. Reinforcement Learning</summary><div>
+  Agents learn via rewards/punishments. Includes Q-learning, DQN, policy gradients.
+</div></details>
+
+<details class="note"><summary>9. Deep Learning</summary><div>
+  Neural networks with many layers (CNN, RNN, LSTM, Transformers). Great for image and language tasks.
+</div></details>
+
+<details class="note"><summary>10. Natural Language Processing</summary><div>
+  Enables machines to understand human language. Tasks: parsing, sentiment analysis, translation.
+</div></details>
+
+<details class="note"><summary>11. Computer Vision</summary><div>
+  Teaches computers to interpret images/videos. Techniques: CNNs, YOLO, segmentation.
+</div></details>
+
+<details class="note"><summary>12. Expert Systems</summary><div>
+  Rule-based systems mimicking human experts. Includes a knowledge base and inference engine.
+</div></details>
+
+<details class="note"><summary>13. Fuzzy Logic</summary><div>
+  Handles reasoning with imprecise inputs. Truth values range between 0 and 1.
+</div></details>
+
+<details class="note"><summary>14. Search & Optimization</summary><div>
+  Used in problem solving and planning. Algorithms: BFS, DFS, A*, genetic algorithms.
+</div></details>
+
+<details class="note"><summary>15. Knowledge Representation</summary><div>
+  Techniques: logic, semantic networks, frames, ontologies.
+</div></details>
+
+<details class="note"><summary>16. AI Ethics & Fairness</summary><div>
+  Addresses bias, transparency, privacy, and job displacement concerns.
+</div></details>
+
+<details class="note"><summary>17. Robotics & Autonomous Systems</summary><div>
+  Combines AI with sensors/actuators for navigation, manipulation, perception.
+</div></details>
+
+<details class="note"><summary>18. AI in the Cloud</summary><div>
+  Scalable training & deployment via platforms like AWS, Azure, GCP using tools like TensorFlow, PyTorch, MLops.
+</div></details>
+
+<details class="note"><summary>19. Use Cases</summary><div>
+  <ul>
+    <li>Healthcare: Diagnosis, drug discovery</li>
+    <li>Finance: Fraud detection, trading</li>
+    <li>Retail: Recommendations</li>
+    <li>Driving: Self-driving cars</li>
+    <li>Customer Service: Chatbots</li>
+    <li>Manufacturing: Predictive maintenance</li>
+  </ul>
+</div></details>
+
+<details class="note"><summary>20. Case Study: GPT-4</summary><div>
+  Transformer-based language model trained on massive corpora. Capable of summarizing, translating, coding. Limitations: hallucination, bias, interpretability.
+</div></details>
+
+<details class="note"><summary>✅ Study Tips</summary><div>
+  <ul>
+    <li>Sketch neural networks and decision trees</li>
+    <li>Implement ML models in Python</li>
+    <li>Use OpenAI, TensorFlow Hub, spaCy APIs</li>
+    <li>Understand AI ethics and responsible deployment</li>
+  </ul>
+</div></details>
+
+  </section>  <script>
+    function filterNotes() {
+      const input = document.getElementById("search").value.toLowerCase();
+      const notes = document.querySelectorAll(".note");
+      notes.forEach(note => {
+        const text = note.textContent.toLowerCase();
+        note.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script></body>
+</html>

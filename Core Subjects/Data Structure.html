@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Structures Full Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f6fc;
+    }
+    header {
+      background-color: #2d6cdf;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 2rem;
+    }
+    #search {
+      margin: 1rem auto;
+      display: block;
+      padding: 0.7rem;
+      width: 90%;
+      max-width: 600px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .note {
+      background-color: white;
+      margin: 1rem auto;
+      width: 90%;
+      max-width: 900px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .note summary {
+      padding: 1rem;
+      cursor: pointer;
+      background-color: #e7f0ff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 8px 8px 0 0;
+    }
+    .note div {
+      padding: 1rem;
+      border-top: 1px solid #ddd;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header><b>Data Structures</b></header>
+  <input type="text" id="search" placeholder="🔍 Search topic..." onkeyup="filterNotes()">  <section id="notesContainer">
+    <details class="note"><summary>1. Introduction to Data Structures</summary><div>
+      Organized way to store and manage data. Types: Primitive (int, char) and Non-Primitive (arrays, lists, trees, graphs).
+    </div></details><details class="note"><summary>2. Arrays</summary><div>
+  Fixed-size linear structure for same type elements. Fast access via index. Use: image processing, lookup tables.
+</div></details>
+
+<details class="note"><summary>3. Linked Lists</summary><div>
+  Nodes connected via pointers. Types: Singly, Doubly, Circular. Use: dynamic memory, undo operations.
+</div></details>
+
+<details class="note"><summary>4. Stacks</summary><div>
+  LIFO structure. `push()`, `pop()`, `peek()`. Use: function calls, expression parsing.
+</div></details>
+
+<details class="note"><summary>5. Queues</summary><div>
+  FIFO structure. Types: Simple, Circular, Priority, Deque. Use: task scheduling, print queues.
+</div></details>
+
+<details class="note"><summary>6. Hash Tables</summary><div>
+  Maps keys to values via hashing. Fast lookup. Use: dictionaries, indexing.
+</div></details>
+
+<details class="note"><summary>7. Trees</summary><div>
+  Hierarchical structure with root and children. Binary Trees, BSTs, AVL, B-Trees. Use: file systems, databases.
+</div></details>
+
+<details class="note"><summary>8. Binary Search Tree (BST)</summary><div>
+  Node.left < Node < Node.right. Use: fast insert, search, delete in sorted data.
+</div></details>
+
+<details class="note"><summary>9. Heaps</summary><div>
+  Complete binary tree. Min/Max Heap properties. Use: priority queues, scheduling, heap sort.
+</div></details>
+
+<details class="note"><summary>10. Graphs</summary><div>
+  Nodes (vertices) connected via edges. Directed/Undirected. Use: networks, maps, social platforms.
+</div></details>
+
+<details class="note"><summary>11. Trie (Prefix Tree)</summary><div>
+  Tree structure for string matching. Use: autocomplete, spell check.
+</div></details>
+
+<details class="note"><summary>12. Set and Map</summary><div>
+  Set: unique elements. Map: key-value pairs. Use: fast lookup, caching, compilers.
+</div></details>
+
+<details class="note"><summary>13. Searching Algorithms</summary><div>
+  Linear Search (O(n)), Binary Search (O(log n)). Use: record lookups, contact searches.
+</div></details>
+
+<details class="note"><summary>14. Sorting Algorithms</summary><div>
+  Types: Bubble, Insertion, Merge, Quick, Heap sort. Use: sorting ranks, reports.
+</div></details>
+
+<details class="note"><summary>15. Recursion</summary><div>
+  Function calls itself. Use: tree traversal, Fibonacci, tower of Hanoi.
+</div></details>
+
+<details class="note"><summary>16. Greedy Algorithms</summary><div>
+  Picks optimal choice at each step. Use: MST, fractional knapsack.
+</div></details>
+
+<details class="note"><summary>17. Dynamic Programming</summary><div>
+  Solves overlapping subproblems using memoization/tabulation. Use: LCS, knapsack.
+</div></details>
+
+<details class="note"><summary>18. Graph Traversal</summary><div>
+  DFS (stack/recursion), BFS (queue). Use: pathfinding, social graph exploration.
+</div></details>
+
+<details class="note"><summary>19. Complexity Analysis</summary><div>
+  Measures efficiency using Big-O: O(1), O(n), O(log n), etc. Time & space complexity guide algorithm choices.
+</div></details>
+
+<details class="note"><summary>20. Applications of Data Structures</summary><div>
+  Compilers: parsing. Databases: indexing. OS: scheduling. Networks: routing.
+</div></details>
+
+<details class="note"><summary>🧠 Study Tips</summary><div>
+  <ul>
+    <li>Practice coding all structures (C/C++/Java/Python)</li>
+    <li>Understand trade-offs in time/space</li>
+    <li>Use platforms like Leetcode, GFG, Codeforces</li>
+    <li>Know where each DS fits in real-world apps</li>
+  </ul>
+</div></details>
+
+<details class="note"><summary>📊 Case Study: Google Maps</summary><div>
+  Graph-based model with nodes as locations. Uses Dijkstra (priority queue) for shortest path. Hash maps for location lookup.
+</div></details>
+
+  </section>  <script>
+    function filterNotes() {
+      const input = document.getElementById('search').value.toLowerCase();
+      const notes = document.querySelectorAll('.note');
+      notes.forEach(note => {
+        const text = note.textContent.toLowerCase();
+        note.style.display = text.includes(input) ? 'block' : 'none';
+      });
+    }
+  </script></body>
+</html>

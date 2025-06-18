@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Profile</title>
+  <style>
+    :root {
+      --primary-color: #4F46E5;
+      --primary-hover: #4338CA;
+      --background: #f3f4f6;
+      --card-bg: #ffffff;
+      --text-color: #111827;
+      --input-border: #d1d5db;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--background);
+      margin: 0;
+      padding: 20px;
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 700px;
+      background: var(--card-bg);
+      padding: 30px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid var(--input-border);
+      border-radius: 6px;
+      font-size: 15px;
+      transition: border 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      color: white;
+      background-color: var(--primary-color);
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--primary-hover);
+    }
+
+    @media (max-width: 500px) {
+      .btn-group {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Profile</h2>
+    <form id="profileForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Your full name" />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" />
+
+      <label for="address">Address:</label>
+      <textarea id="address" rows="2" placeholder="Your address"></textarea>
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" placeholder="e.g. 9876543210" />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" placeholder="you@example.com" />
+
+      <label for="github">GitHub Profile:</label>
+      <input type="url" id="github" placeholder="https://github.com/username" />
+
+      <label for="standard">Standard:</label>
+      <input type="text" id="standard" placeholder="e.g. 12th Grade" />
+
+      <label for="skills">Skills (comma separated):</label>
+      <input type="text" id="skills" placeholder="e.g. HTML, CSS, JavaScript" />
+
+      <div class="btn-group">
+        <button type="button" onclick="saveProfile()">Save</button>
+        <button type="button" onclick="loadProfile()">Load</button>
+        <button type="button" onclick="clearProfile()">Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function saveProfile() {
+      const profile = {
+        name: document.getElementById('name').value,
+        dob: document.getElementById('dob').value,
+        address: document.getElementById('address').value,
+        mobile: document.getElementById('mobile').value,
+        email: document.getElementById('email').value,
+        github: document.getElementById('github').value,
+        standard: document.getElementById('standard').value,
+        skills: document.getElementById('skills').value
+      };
+      localStorage.setItem('userProfile', JSON.stringify(profile));
+      alert('Profile saved!');
+    }
+
+    function loadProfile() {
+      const profile = JSON.parse(localStorage.getItem('userProfile'));
+      if (profile) {
+        document.getElementById('name').value = profile.name;
+        document.getElementById('dob').value = profile.dob;
+        document.getElementById('address').value = profile.address;
+        document.getElementById('mobile').value = profile.mobile;
+        document.getElementById('email').value = profile.email;
+        document.getElementById('github').value = profile.github;
+        document.getElementById('standard').value = profile.standard;
+        document.getElementById('skills').value = profile.skills;
+      } else {
+        alert('No saved profile found.');
+      }
+    }
+
+    function clearProfile() {
+      localStorage.removeItem('userProfile');
+      document.getElementById('profileForm').reset();
+      alert('Profile cleared.');
+    }
+
+    // Auto-load profile on page load
+    window.onload = loadProfile;
+  </script>
+</body>
+</html>

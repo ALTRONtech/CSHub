@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar h1 {
+      font-size: 24px;
+    }
+
+    .profile-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-image:url("/Main/0db41e37cbef902b042d4ea5eb3b6dcd.jpg");
+      background-size: cover;
+
+    }
+
+    .welcome {
+      background: #1e1e1e;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+    }
+
+    .subjects {
+      margin-bottom: 20px;
+    }
+
+    .subjects h2 {
+      margin-bottom: 10px;
+    }
+
+    .subject-cards {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding-bottom: 10px;
+    }
+
+    .card {
+      background: #292929;
+      padding: 15px;
+      border-radius: 10px;
+      min-width: 150px;
+      flex-shrink: 0;
+    }
+
+    .actions h2 {
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      background: #4f46e5;
+      border: none;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: #4338ca;
+    }
+
+    footer {
+      margin: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <h1><b>CSHub</b></h1>
+    <div class="profile-icon" id="Profile"></div>
+  </div>
+
+  <div class="welcome">
+    <h2>Welcome back, Student!</h2>
+    <p>Ready to sharpen your coding skills?</p>
+  </div>
+
+  <div class="subjects">
+    <h2>Core Subjects</h2>
+    <div class="subject-cards">
+      <div class="card" id="Data">Data Structures</div>
+      <div class="card" id="Algorithm">Algorithms</div>
+      <div class="card" id="DBMS">DBMS</div>
+      <div class="card" id="Operating system">Operating Systems</div>
+      <div class="card" id="Ai">AI</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <h2>Quick Actions</h2>
+    <button class="button" id="Quiz">Start Quiz</button>
+    <button class="button" id="Notes">View Notes</button>
+    <button class="button" id="Languages">Programming Languages</button>
+
+    <!--Tab to edit-->
+    <!--<button class="button" id="Progress">Track Progress</button>-->
+  </div>
+  <footer>
+    <h4>Created By Dipesh Patne</h4>
+    &copy;2025 All Right Reserved
+  </footer>
+  <script>
+    document.getElementById("Quiz").addEventListener("click", function() {
+      window.location.href = "Quiz Page.html"
+    });
+
+    document.getElementById("Notes").addEventListener("click", function() {
+      window.location.href = "Notes Page.html"
+    });
+    document.getElementById("Languages").addEventListener("click", function() {
+      window.location.href = "Programming Languages.html"
+    })
+    /*document.getElementById("Progress").addEventListener("click", function() {
+      window.location.href = "Progress Page.html"
+    });*/
+
+    document.getElementById("Data").addEventListener("click", function() {
+      window.location.href = "/Core Subjects/Data Structure.html"
+    });
+
+    document.getElementById("Profile").addEventListener("click", function() {
+      window.location.href = "Profile Page.html"
+    });
+
+    document.getElementById("Algorithm").addEventListener("click", function() {
+      window.location.href = "/Core Subjects/Algorithm.html"
+    });
+    document.getElementById("DBMS").addEventListener("click", function() {
+      window.location.href = "/Core Subjects/DBMS.html"
+    });
+    document.getElementById("Operating system").addEventListener("click", function() {
+      window.location.href = "/Core Subjects/Operating system.html"
+    });
+    document.getElementById("Ai").addEventListener("click", function() {
+      window.location.href = "/Core Subjects/Ai.html"
+    });
+  </script>
+</body>
+
+</html>
