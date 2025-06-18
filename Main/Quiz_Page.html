@@ -51,7 +51,7 @@
       font-weight: bold;
     }
   </style>
-  <script src="./questions.js"></script>
+  <script src="questions.js" defer></script>
 </head>
 <body>
   <header><b>MCQ Quiz</b></header>
@@ -59,7 +59,7 @@
     <div id="quiz-box">
       <div class="question" id="question">Loading question...</div>
       <div class="options" id="options"></div>
-      <button onclick="checkAnswer()">Submit</button>
+      <button id="submit-btn">Submit</button>
       <div class="result" id="result"></div>
     </div>
   </div>

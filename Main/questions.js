@@ -81,3 +81,8 @@ function checkAnswer() {
 document.addEventListener("DOMContentLoaded", function () {
   loadQuestion();
 });
+
+const submitBtn = document.getElementById("submit-btn");
+submitBtn.addEventListener("click", () => {
+  checkAnswer();
+});
