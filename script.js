@@ -1,3 +1,3 @@
 setTimeout(() => {
-      window.location.href ="ALTRONtech/Main/Home Page.html";
+      window.location.href ="Main/Home_Page.html";
     }, 4000);
