@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSHub - Startup</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d1b2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .startup-container {
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+    .logo {
+      width: 400px;
+      max-width: 90%;
+      height: 100px;
+  object-fit: cover;
+      
+      margin-bottom: 0px;
+    }
+
+    .title {
+      font-size: 2rem;
+      color: #cce5ff;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   </style>
 </head>
-
 <body>
-  <div class="splash">
-    <h1 class="logo">Welcome to CSHub</h1>
-    <p class="subtitle">Loading...</p>
+  <div class="startup-container">
+    
+    <img src="/CS.png" alt="CSHub Logo" class="logo" />
+    
+  
+      <!--Tab to edit
+  <div class="title">Welcome to CSHub</div>-->
   </div>
-  <script src="script.js"></script>
+  <script src="script.js">
 </body>
-
 </html>
