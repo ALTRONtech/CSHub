@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSHub - Learn CS the right way</title>
+  <title>Learn</title>
   <style>
     body {
       margin: 0;
@@ -28,7 +28,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-image:url("./0db41e37cbef902b042d4ea5eb3b6dcd.jpg");
+      background-image: url("/Main/0db41e37cbef902b042d4ea5eb3b6dcd.jpg");
       background-size: cover;
 
     }
@@ -89,6 +89,33 @@
       margin: 50px;
       text-align: center;
     }
+
+    #github {
+      height: 30px;
+      width: auto;
+      background: white;
+      border-radius: 50%;
+      border: none;
+      margin: 10px;
+    }
+
+    #instagram {
+      height: 30px;
+      width: auto;
+      background: white;
+      border-radius: 50%;
+      border: none;
+      margin: 10px;
+    }
+
+    #telegram {
+      height: 30px;
+      width: auto;
+      background: white;
+      border-radius: 50%;
+      border: none;
+      margin: 10px;
+    }
   </style>
 </head>
 
@@ -127,6 +154,11 @@
   <footer>
     <h4>Created By Dipesh Patne</h4>
     &copy;2025 All Right Reserved
+    <br>
+    <img src="/github.svg" alt="logo" id="github">
+    <img src="/instagram.svg" alt="logo" id="instagram">
+    <img src="/telegram.svg" alt="logo" id="telegram">
+
   </footer>
   <script>
     document.getElementById("Quiz").addEventListener("click", function() {
@@ -140,11 +172,11 @@
       window.location.href = "Programming_Languages.html"
     })
     /*document.getElementById("Progress").addEventListener("click", function() {
-      window.location.href = "Progress_Page.html"
+      window.location.href = "Progress Page.html"
     });*/
 
     document.getElementById("Data").addEventListener("click", function() {
-      window.location.href = "../Core_Subjects/Data_Structure.html"
+      window.location.href = "/Core_Subjects/Data_Structure.html"
     });
 
     document.getElementById("Profile").addEventListener("click", function() {
@@ -152,18 +184,29 @@
     });
 
     document.getElementById("Algorithm").addEventListener("click", function() {
-      window.location.href = "../Core_Subjects/Algorithm.html"
+      window.location.href = "/Core_Subjects/Algorithm.html"
     });
     document.getElementById("DBMS").addEventListener("click", function() {
-      window.location.href = "../Core_Subjects/DBMS.html"
+      window.location.href = "/Core_Subjects/DBMS.html"
     });
     document.getElementById("Operating system").addEventListener("click", function() {
-      window.location.href = "../Core_Subjects/Operating_System.html"
+      window.location.href = "/Core_Subjects/Operating_system.html"
     });
     document.getElementById("Ai").addEventListener("click", function() {
-      window.location.href = "../Core_Subjects/Ai.html"
+      window.location.href = "/Core_Subjects/Ai.html"
+    });
+
+    document.getElementById("github").addEventListener("click", function() {
+      window.location.href = "https://github.com/ALTRONtech"
+    });
+    document.getElementById("instagram").addEventListener("click", function() {
+      window.location.href = "https://www.instagram.com/dipesh_30x?igsh=c3liZ3JvMjY1NmJw"
+    });
+
+    document.getElementById("telegram").addEventListener("click", function() {
+      window.location.href = "https://t.me/DipeshPatne"
     });
   </script>
 </body>
 
-</html>
+</html>w
